@@ -64,7 +64,7 @@ height: 400px;
 
 
     footer {
-background-color: aqua;
+background-image: linear-gradient(to bottom, blue, red, orange);
 
     }
 
