@@ -1,0 +1,150 @@
+* ::before::after {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    
+    }
+    
+    header {grid-area: head;}
+    .blockpadre {grid-area: contenedorp;}
+    footer {grid-area: foot;}
+    #contenedorpadressobrenosotros {grid-area: contenedorp;}
+    #contenedorformulario {grid-area: contenedorp;}
+    
+    
+    body {
+        display: grid;
+        background-color: darkgoldenrod;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.25fr 3fr 0.25fr;
+    grid-template-areas: "head head head"
+    "contenedorp contenedorp contenedorp"
+    "foot foot foot";
+    gap: 10px 10px;
+    
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+    }
+    
+    nav li {
+        display: inline-flex;
+        margin-right: 4px;
+      }
+    
+    .blockpadre {
+        background-color: rgb(25, 184, 11);
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-content: center;
+        
+        }
+    
+        .block1 {
+            background-color: azure;
+            width: 300px;
+            height: 400px;
+    
+        }
+    
+        .block3 {
+    background-color: azure;
+    width: 300px;
+    height: 400px;
+    
+        }
+    
+    .block2 {
+    background-color: bisque;
+    width: 300px;
+    height: 400px;
+    }
+
+    #contenedorpadressobrenosotros {
+        gap: 5px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: aquamarine;
+        
+    }
+
+    #nosotrosimagen {
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        background-color: brown;
+        width: 200px;
+        height: 200px;
+    }
+
+    #contenedorformulario {
+        gap: 5px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: aquamarine;
+
+    }
+    
+    
+        footer {
+    background-color: aqua;
+    
+        }
+    
+        footer ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        footer li {
+            display: inline-flex;
+            margin-right: 4px;
+          }
+    
+        header {
+            background-color: aqua;
+        }
+    
+    
+        @media only screen and (max-width: 600px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.25fr max-content 0.25fr;
+                grid-template-areas: "head"
+    "contenedorp"
+    "foot";
+    
+    gap: 10px 10px;
+    
+            }
+    
+            .blockpadre {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            #contenedorpadressobrenosotros {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            #contenedorformulario {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            img {
+width: auto;
+
+            }
+    
+       
+            
+        }
